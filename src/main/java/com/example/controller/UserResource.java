@@ -2,9 +2,11 @@ package com.example.controller;
 
 import java.util.List;
 
-import com.example.Exception.UserNotFoundException;
+import javax.validation.Valid;
+
 import com.example.dao.UserDaoServices;
 import com.example.dao.Users;
+import com.example.exception.UserNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,7 +38,7 @@ public class UserResource {
     }
 
     @PostMapping("/users")
-    public @ResponseBody String createUsers(@RequestBody Users user) {
+    public @ResponseBody String createUsers(@Valid @RequestBody Users user) {
         Users saveUser = service.save(user);
         return "New User Added Succssfully";
     }

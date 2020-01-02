@@ -1,16 +1,16 @@
-package com.example.Exception;
+package com.example.exception;
 
 import java.util.Date;
 
 import lombok.Data;
 
 @Data
-public class Exception {
+public class ExceptionResponse {
     private Date date;
     private String message;
     private String details;
 
-    public Exception(Date date, String message, String details) {
+    public ExceptionResponse(Date date, String message, String details) {
         this.date = date;
         this.message = message;
         this.details = details;

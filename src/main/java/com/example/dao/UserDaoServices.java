@@ -22,6 +22,7 @@ public class UserDaoServices {
 
     public Users save(Users user) {
         // System.out.println(user.getId());
+        System.out.println(user.getId());
         if (user.getId() == null) {
             user.setId(count++);
         }
